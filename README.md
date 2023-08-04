@@ -21,4 +21,6 @@
 | 이름 | GitHub | 
 | --- | ------  | 
 | 이동준 | https://github.com/cire0304 |
-| 추가 예정 | 예정 |
+| 임동현 | https://github.com/birdieHyun |
+| 남권우 | https://github.com/Gwonwoo-Nam | 
+| 김성규 | https://github.com/acceptor-gyu |
