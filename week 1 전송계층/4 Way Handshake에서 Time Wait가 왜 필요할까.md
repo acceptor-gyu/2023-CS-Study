@@ -12,30 +12,36 @@ TIME-WAIT 상태는 4 way handshake의 일부로 TCP 연결 종료 과정에서 
 # 4 way handshake
 
 4 way handshake는 다음 4 단계를 거쳐 진행됩니다.
+![image](https://github.com/CodeSquad-BE-Study/2023-CS-Study/assets/115435784/847fd377-aad0-44f3-b009-7cbafc6a0643)
+
 
 ### 1 단계
 
 클라리언트가 연결을 종료하기 위해 **FIN** 을 전송한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/45b980bb-c1ee-495c-bf67-1ee0e150f684/Untitled.png)
+![image](https://github.com/CodeSquad-BE-Study/2023-CS-Study/assets/115435784/74409d00-18b4-4470-b598-92565df6cfb3)
+
 
 ### 2 단계
 
 서버는 클라이언트의 **FIN** 요청을 받고, 확인메시지인 **ACK**를 전송한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0a2622a3-1ff5-4f5d-b4e5-fb3ee44110b8/Untitled.jpeg)
+![image](https://github.com/CodeSquad-BE-Study/2023-CS-Study/assets/115435784/6d6043f2-3cef-4373-96ca-a7b8cbb7acc7)
+
 
 ### 3 단계
 
 서버가 연결을 종료할 준비가 되면, 클라이언트에게 **FIN** 요청을 전송한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7af4b5fb-de4b-4035-88b8-9919d5383c78/Untitled.jpeg)
+![image](https://github.com/CodeSquad-BE-Study/2023-CS-Study/assets/115435784/c3393afe-0217-4343-abbe-0907083f6e5e)
+
 
 ### 4 단계
 
 클라이언트는 연결 종료 준비가 되었다는 ACK 메시지를 전송합니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1c6e7999-838d-4686-866e-dd217c67b3ba/Untitled.jpeg)
+![image](https://github.com/CodeSquad-BE-Study/2023-CS-Study/assets/115435784/9526444b-d9ad-48ad-91a0-203fe7aaf59c)
+
 
 **이 때 클라이언트의 상태는 TIME-WAIT** 가 됩니다.
 
@@ -51,7 +57,8 @@ TIME-WAIT 상태는 4 way handshake의 일부로 TCP 연결 종료 과정에서 
 
 첫 번째 상황을 가정해보겠습니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cd784b2a-c45a-45d1-972e-c70f5fb3afe1/Untitled.png)
+![image](https://github.com/CodeSquad-BE-Study/2023-CS-Study/assets/115435784/6555d870-5eed-4250-bfde-6952c0e0340d)
+
 
 이렇게 서버가 FIN 요청을 보낸 후 클라이언트가 ACK 응답을 보냈는데, 중간에 패킷이 유실된다면 어떻게 될까요?
 
@@ -59,7 +66,8 @@ TIME-WAIT 상태는 4 way handshake의 일부로 TCP 연결 종료 과정에서 
 
 두 번째 상황입니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ebd50aaf-dc41-4109-8e7f-c9f90c66df04/Untitled.png)
+![image](https://github.com/CodeSquad-BE-Study/2023-CS-Study/assets/115435784/529e7c16-6c3f-4a8c-929a-4be613016fb8)
+
 
 클라이언트가 마지막 요청을 보낸 후, FIN 요청을 주고받게 되는데, 마지막 요청이 시간이 오래 걸려서 CLOSE 된 후 ACK가 도착한다면 어떻게 될까요?
 
